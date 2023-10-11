@@ -2,7 +2,7 @@ class Character {
   name;
   family;
   age;
-  isAlive = true;
+  liveOrDeath = "alive";
   serie = "Game of Thrones";
 
   constructor(name, family, age) {
@@ -12,7 +12,11 @@ class Character {
   }
 
   die() {
-    return (this.isAlive = false);
+    return (this.liveOrDeath = "death");
+  }
+
+  saySomething() {
+    return `My name is ${this.name}, my family is ${this.family}.`;
   }
 }
 
